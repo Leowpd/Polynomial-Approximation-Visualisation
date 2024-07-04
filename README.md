@@ -20,8 +20,6 @@ The second graph with all the overlaid polynomials also looks quite pretty.
 
 Two examples are shown below:
 
-<img src="https://github.com/Leowpd/Polynomial-Approximation-Visualisation/blob/main/images/taylor-simple.gif" width="366" height="322">
-<img src="https://github.com/Leowpd/Polynomial-Approximation-Visualisation/blob/main/images/taylor-simple.png" width="366" height="322">
+<img src="https://github.com/Leowpd/Polynomial-Approximation-Visualisation/blob/main/images/taylor-simple.gif" width="366" height="322"> <img src="https://github.com/Leowpd/Polynomial-Approximation-Visualisation/blob/main/images/taylor-simple.png" width="366" height="322">
 
-<img src="https://github.com/Leowpd/Polynomial-Approximation-Visualisation/blob/main/images/taylor-complicated.gif" width="366" height="322">
-<img src="https://github.com/Leowpd/Polynomial-Approximation-Visualisation/blob/main/images/taylor-complicated.png" width="366" height="322">
+<img src="https://github.com/Leowpd/Polynomial-Approximation-Visualisation/blob/main/images/taylor-complicated.gif" width="366" height="322"> <img src="https://github.com/Leowpd/Polynomial-Approximation-Visualisation/blob/main/images/taylor-complicated.png" width="366" height="322">
