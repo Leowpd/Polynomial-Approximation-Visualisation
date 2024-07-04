@@ -1,26 +1,29 @@
-%version 3 is hopefully gonna combine versions 1 and 2 so you can see both
-%animations simultaneously.
+%program: Taylor Series Visualiser
+%author: Leo Duncan
+%description: A program that visualises a Taylor Series approximation of a
+%function.
+
 
 syms function_to_approximate(x)
 
-%%%%%%%%%%%%%%%% USER INPUT %%%%%%%%%%%%%%%% sin(x)*log(exp(x))/3
+%%%%%%%%%%%%%%%%%%%% USER INPUT %%%%%%%%%%%%%%%%%%%%
 
-function_to_approximate(x) = sin(x);
-max_polynomial_degree = 13;
+function_to_approximate(x) = sin(x)*log(exp(x))/3;
+max_polynomial_degree = 17;
 
 %input "0" for the Maclaurin polynomial 
-taylor_approximate_around_point = 0;
+taylor_approximate_around_point = -12.6;
 
 %speed in seconds of animation
 speed = 0.5;
 
 %viewing window
-minX = -30;
-maxX = 30;
-minY = -10;
-maxY = 10;
+minX = -40;
+maxX = 40;
+minY = -20;
+maxY = 20;
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -35,7 +38,9 @@ secondary_line_weight = 2;
 
 figure(1)
 t = tiledlayout(2,1);
-title(t, strcat({'Degree '}, num2str(max_polynomial_degree), ' Taylor Polynomial of f(x) = ', string(function_to_approximate(x))))
+fig_title = strcat({'Degree '}, num2str(max_polynomial_degree), ' Taylor Polynomial around point x=', num2str(taylor_approximate_around_point), ' of f(x) = ', string(f(x)));
+title(t, fig_title)
+
 
 % Tile 1
 nexttile(1);
@@ -43,7 +48,7 @@ hold on
 grid on
 plot(x0,f(x0), 'black', 'LineWidth',primary_line_weight, 'DisplayName','f(x)')
 title('nth Taylor Polynomial')
-line1 = plot(0,0,'visible','off', 'HandleVisibility','off'); %initialises "line1" so that "delete(line1);" later on has no issues.
+line1 = plot(0,0, 'visible','off', 'HandleVisibility','off'); %initialises "line1" so that "delete(line1);" later on has no issues.
 
 xlim([minX maxX])
 ylim([minY maxY])
@@ -57,7 +62,7 @@ hold on
 grid on
 plot(x0,f(x0), 'black', 'LineWidth',primary_line_weight, 'DisplayName','f(x)')
 title('First n Taylor Polynomials')
-line2 = plot(0,0,'visible','off', 'HandleVisibility','off'); %ensures the colours of both graphs are consistent.
+line2 = plot(0,0, 'visible','off', 'HandleVisibility','off'); %ensures the colours of both graphs are consistent.
 
 xlim([minX maxX])
 ylim([minY maxY])
@@ -84,15 +89,13 @@ for k = 1:max_polynomial_degree
 
         nexttile(1)
         delete(line1); %delete previous line
-        line1 = plot(x0, p_k(x0), 'LineWidth',primary_line_weight, 'DisplayName',strcat('deg.', num2str(k)));
+        line1 = plot(x0,p_k(x0), 'LineWidth',primary_line_weight, 'DisplayName',strcat('deg.', num2str(k)));
         legend %update legend
 
         nexttile(2)
-        plot(x0, p_k(x0), 'LineWidth',secondary_line_weight, 'DisplayName',strcat('deg.', num2str(k)))
+        plot(x0,p_k(x0), 'LineWidth',secondary_line_weight, 'DisplayName',strcat('deg.', num2str(k)))
         legend %update legend
 
-        
     end
-
 end
 
