@@ -1,5 +1,5 @@
-# Taylor-Series-Visualisation
-Author: Leo Duncan.
+# Taylor-Series-Visualiser
+Author: Leo Duncan
 
 Visually shows how Taylor Series can approximate functions.
 
@@ -20,6 +20,6 @@ The bottom graph with all the overlaid polynomials also looks quite pretty.
 
 Two examples are shown below:
 
-<img src="https://github.com/Leowpd/Polynomial-Approximation-Visualisation/blob/main/images/taylor-simple.png" width="366" height="322"> <img src="https://github.com/Leowpd/Polynomial-Approximation-Visualisation/blob/main/images/taylor-simple.gif" width="366" height="322">
+<img src="https://github.com/Leowpd/Taylor-Series-Visualiser/blob/main/images/taylor-simple.png" alt="Image of simple Taylor approximation done with program" width="366" height="322"> <img src="https://github.com/Leowpd/Taylor-Series-Visualiser/blob/main/images/taylor-simple.gif" alt="Gif of simple Taylor approximation done with program" width="366" height="322">
 
-<img src="https://github.com/Leowpd/Polynomial-Approximation-Visualisation/blob/main/images/taylor-complicated.png" width="366" height="322"> <img src="https://github.com/Leowpd/Polynomial-Approximation-Visualisation/blob/main/images/taylor-complicated.gif" width="366" height="322">
+<img src="https://github.com/Leowpd/Taylor-Series-Visualiser/blob/main/images/taylor-complicated.png" alt="Image of complicated Taylor approximation done with program" width="366" height="322"> <img src="https://github.com/Leowpd/Taylor-Series-Visualiser/blob/main/images/taylor-complicated.gif" alt="Gif of complicated Taylor approximation done with program" width="366" height="322">
