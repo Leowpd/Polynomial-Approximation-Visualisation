@@ -1,22 +1,33 @@
 
 
-x = linspace(-2*pi,3);
-y1 = sin(x);
-y2 = exp(x);
+syms f(x)
+f(x) = sin(x);
 
-y3 = 1 + x + x.^2/2 + x.^3/6 + x.^4/24 + x.^5/120;
+Df = diff(f,x)
+DDf = diff(f,x,2)
+
+
+x0 = linspace(-5*pi/2,5*pi/2);
+
+
+
+
+
+
+
+
 
 figure(1)
 
-plot(x,y1)
+plot(x0,f(x0))
 
 hold on
 grid on
 
-plot(x,y2)
-plot(x,y3)
+plot(x0,Df(x0))
+plot(x0,DDf(x0))
 
 
-xlim([-2*pi 3])
-ylim([-20 20])
+xlim([-5*pi/2 5*pi/2])
+ylim([-2 2])
 
