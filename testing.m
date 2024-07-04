@@ -1,11 +1,22 @@
 
 
-x = 0:pi/100:2*pi;
+x = linspace(-2*pi,3);
 y1 = sin(x);
-y2 = sin(x-0.25);
-y3 = sin(x-0.5);
+y2 = exp(x);
 
-figure
-plot(x,y1,x,y2,'--',x,y3,':')
+y3 = 1 + x + x.^2/2 + x.^3/6 + x.^4/24 + x.^5/120;
 
-disp(1)
+figure(1)
+
+plot(x,y1)
+
+hold on
+grid minor
+
+plot(x,y2)
+plot(x,y3)
+
+
+xlim([-2*pi 3])
+ylim([-20 20])
+
