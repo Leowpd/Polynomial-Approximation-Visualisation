@@ -11,7 +11,7 @@ figure(1)
 plot(x,y1)
 
 hold on
-grid minor
+grid on
 
 plot(x,y2)
 plot(x,y3)
