@@ -1,33 +1,27 @@
 
 
 syms f(x)
-f(x) = sin(x);
+f(x) = sin(x); %could be any (simple?) function we want to approximate.
 
-Df = diff(f,x)
-DDf = diff(f,x,2)
-
-
-x0 = linspace(-5*pi/2,5*pi/2);
-
-
-
-
-
-
-
+x0 = linspace(-20,20); %change to make more flexible in future iterations
 
 
 figure(1)
 
-plot(x0,f(x0))
-
+line1 = plot(x0,f(x0));
 hold on
 grid on
 
-plot(x0,Df(x0))
-plot(x0,DDf(x0))
+xlim([-20 20])
+ylim([-10 10])
 
+syms g(x)
+g(x) = cos(x);
 
-xlim([-5*pi/2 5*pi/2])
-ylim([-2 2])
+pause(1)
 
+line2 = plot(x0,g(x0));
+
+pause(1)
+
+delete(line1)
