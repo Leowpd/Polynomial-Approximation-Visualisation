@@ -6,7 +6,7 @@ Visually shows how Taylor Series can approximate functions.
 The author uses MATLAB to develop a greater understanding of the material taught in MATHS 250 Algebra and Calculus 2 at UoA.
 
 The user can specify the function to approximate,
-the highest degree Taylor polynomial to generate,
+the highest degree Taylor Polynomial to generate,
 and the point the approximation generates around,
 among some other inputs.
 
